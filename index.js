@@ -18,10 +18,13 @@ const server = new ApolloServer({
 });
 
 mongoose
-  .connect("mongodb://localhost:27017/thoughts", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://olusogabolaji:IGyS6jVyb9sRpWyJ@cluster0.pgw3kgz.mongodb.net/thoughts",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("DB Connection successfull");
   })
